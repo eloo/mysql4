@@ -32,7 +32,5 @@ EOS
 fi
 
 #run it
-if [ -n "$@" ]; then
-	exec "$@"
-fi
+exec "$@"
 

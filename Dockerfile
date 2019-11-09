@@ -1,5 +1,5 @@
 FROM ubuntu:12.04
-MAINTAINER tommi2day
+MAINTAINER eloo
 
 #env
 ENV DEBIAN_FRONTEND noninteractive
@@ -34,4 +34,4 @@ VOLUME /db
 
 #define entrypoint
 ENTRYPOINT ["/root/start.sh"]
-CMD ["mysqld_safe"]
+CMD ["mysqld_safe", "-O", "lower_case_table_names=1"]
